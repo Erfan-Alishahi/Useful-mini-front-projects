@@ -3,7 +3,7 @@
 A modern and animated **Sign-Up / Login interface** built with **HTML, CSS, and JavaScript**.  
 This project demonstrates how to design an interactive authentication layout with smooth transitions and minimalistic UI elements.
 
-![Preview](../assets/sign-up-preview.gif) <!-- می‌تونی اسکرین‌شات بزاری اگر داری -->
+![Preview](/assets/Screencast.gif)
 
 ---
 
@@ -72,14 +72,10 @@ This project was created as part of a collection of small front-end mini-project
 
 ---
 
-### 🙌 Author
+### 🌟 Feel free to explore!
 
-**Erfan Alishahi**  
-🔗 [GitHub Profile](https://github.com/Erfan-Alishahi)
+If you find these useful or inspiring, consider giving the repo a ⭐ and let me know your thoughts!
 
 ---
 
-### ⭐️ Give a Star!
-
-If you liked this project, please consider giving it a ⭐ on GitHub.  
-It helps me grow and keeps the motivation alive!
+Made with ❤️ by [Erfan Alishahi](https://github.com/Erfan-Alishahi)
