@@ -3,7 +3,7 @@
 A modern and animated **Sign-Up / Login interface** built with **HTML, CSS, and JavaScript**.  
 This project demonstrates how to design an interactive authentication layout with smooth transitions and minimalistic UI elements.
 
-![Preview](/assets/Screencast.gif)
+![Preview](assets/Screencast.gif)
 
 ---
 
