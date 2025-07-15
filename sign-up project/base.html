@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up Form</title>
+    <title>signup-login form</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,11 +14,17 @@
     <div class="container">
         <div class="form-wrapper">
             <div class="banner">
-                <h1>Hello friend</h1>
-                <p>Enter your personal details and start journey with us.</p>
+                <h1>Hello Friends</h1>
+                <p class="subtext1">Enter your personal details and start journey with us</p>
+                <p class="subtext2">Enter your email and password to log in</p>
             </div>
             <div class="green-bg">
-                <button type="button">Sign Up</button>
+                <button class="action-btn signup">Sign Up</button>
+                <button class="action-btn login">Log In</button>
+            </div>
+            <div class="buttons">
+                <button class="back-l">Back</button>
+                <button class="back-r">Back</button>
             </div>
             <form class="signup-form">
                 <h1>Create an account</h1>
@@ -41,6 +47,19 @@
                     <input type="password" placeholder="Password">
                 </div>
                 <button type="button">Sign Up</button>
+            </form>
+            <form class="login-form">
+                <h1>Welcome back</h1>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+                <a href="#">Forgot password?</a>
+                <button type="button">Log In</button>
             </form>
         </div>
     </div>

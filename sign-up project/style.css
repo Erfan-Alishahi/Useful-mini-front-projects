@@ -26,25 +26,73 @@ html {
     overflow: hidden;
 }
 
-.banner {
+.banner h1{
     position: absolute;
-    top: 25%;
-    left: -30rem;
+    top: 40%;
+    left: 50%;
     text-align: center;
     color: #fff;
     width: 30rem;
     z-index: 100;
     transition: left 0.8s;
+    transform: translate(-50%, -50%);
 }
 
-.container.change .banner {
-    left: 10rem;
+.banner .subtext1 {
+    position: absolute;
+    top: 55%;
+    left: -100%;
+    text-align: center;
+    color: #fff;
+    width: 30rem;
+    z-index: 100;
+    transition: left 0.8s;
+    transform: translate(-50%, -50%);
 }
 
-.banner h1 {
-    font-size: 4rem;
-    margin-bottom: 3rem;
+.banner .subtext2 {
+    position: absolute;
+    top: 55%;
+    left: 200%;
+    text-align: center;
+    color: #fff;
+    width: 30rem;
+    z-index: 100;
+    transition: left 0.8s;
+    transform: translate(50%, -50%);
 }
+
+.container.move-right .banner h1 {
+    left: 75%;
+}
+
+.container.move-left .banner h1 {
+    left: 25%;
+}
+
+
+.container.move-center .banner h1 {
+    left: 50%;
+}
+
+
+.container.move-left .banner .subtext1 {
+    left: 25%;
+}
+
+.container.move-center .banner .subtext1 {
+    left: -100%;
+}
+
+.container.move-right .banner .subtext2 {
+    left: 45%;
+}
+
+
+.container.move-center .banner .subtext2 {
+    left: 200%;
+}
+
 
 .banner p {
     font-size: 2rem;
@@ -53,23 +101,29 @@ html {
 .green-bg {
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, #3ab19b, #4cbf91);
+    background: linear-gradient(to top, #3ab19b, #4cbf91);
     position: absolute;
     top: 0;
     left: 0;
     z-index: 50;
-    transition: width 1.5s cubic-bezier(0.19,1,0.22,1);
+    transition: left 0.8s ease, width 1.5s ease;
 }
 
-.container.change .green-bg {
-    width: 50%;
+.container.move-left .green-bg {
+    left: -50rem;
 }
 
-.green-bg button {
+
+.container.move-right .green-bg {
+    left: 50rem;
+}
+
+.container.move-center .green-bg {
+    left: 0rem;
+}
+
+.green-bg .action-btn {
     position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translateX(-50%);
     width: 16rem;
     height: 5rem;
     background-color: transparent;
@@ -79,14 +133,98 @@ html {
     letter-spacing: 0.1rem;
     color: #fff;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100
 }
+
+.green-bg .login {
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.green-bg .signup {
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container.move-left .signup {
+    visibility: hidden;
+}
+
+.container.move-left .login {
+    visibility: hidden;
+}
+
+.container.move-right .login {
+    visibility: hidden;
+}
+
+.container.move-right .signup {
+    visibility: hidden;
+}
+
+
+.container.move-center .signup {
+    visibility: visible;
+}
+
+.container.move-center .login {
+    visibility: visible;
+}
+
+
+/*--------back buttons--------*/
+.back-l,
+.back-r {
+    position: absolute;
+    width: 16rem;
+    height: 5rem;
+    background-color: transparent;
+    border: 0.1rem solid #fff;
+    border-radius: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transform: translateX(-50%);
+    transition: left 0.8s;
+}
+
+.back-l {
+    top: 70%;
+    left: -100%;
+}
+
+.back-r {
+    top: 70%;
+    left: 200%;
+}
+
+.container.move-left .back-l {
+    left: 25%
+}
+
+.container.move-right .back-r {
+    left: 75%
+}
+/******************************/
+
+/*--------- signup-form -----------*/
 
 .signup-form {
     width: 70rem;
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -95,9 +233,10 @@ html {
     transition: left 1.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.container.change .signup-form {
+.container.move-right .signup-form {
     left: 40rem;
 }
+
 
 .signup-form h1 {
     font-size: 4rem;
@@ -127,11 +266,11 @@ html {
     margin-bottom: 2rem;
 }
 
-.input-group {
+.signup-form .input-group {
     position: relative;
 }
 
-.input-group input {
+.signup-form  .input-group input {
     width: 28rem;
     height: 5rem;
     padding: 1rem 1rem 1rem 3rem;
@@ -140,7 +279,7 @@ html {
     border-radius: 0.5rem;
 }
 
-.input-group i {
+.signup-form .input-group i {
     position: absolute;
     top: 50%;
     left: 1rem;
@@ -161,3 +300,74 @@ html {
     margin-top: 3rem;
     cursor: pointer;
 }
+/***********************************/
+
+/*--------- login-form -----------*/
+
+.login-form {
+    width: 70rem;
+    height: 100%;
+    position: absolute;
+    top: 15%;
+    right: 40%;
+    padding: 10rem 0;
+    transition: left 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.login-form h1 {
+    font-size: 4rem;
+    color: #3aaf9f;
+    margin-bottom: 2rem;
+}
+
+.login-form .input-group {
+    position: relative;    
+}
+
+.login-form .input-group input {
+    width: 28rem;
+    height: 5rem;
+    padding: 1rem 1rem 1rem 3rem;
+    background-color: #ddd;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.login-form .input-group i {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #555;
+    transition: color 0.3s cubic-bezier(0.19, 1, 0.22, 1)
+}
+
+.login-form a {
+    color: #888;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: color 0.3s cubic-bezier(0.19, 1, 0.22, 1)
+}
+
+.login-form button {
+    width: 16rem;
+    height: 5rem;
+    background-color: #3aaf9f;
+    border: none;
+    border-radius: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #fff;
+    margin-top: 3rem;
+    cursor: pointer;
+}
+/***********************************/
+
